@@ -1044,15 +1044,16 @@ p {
 .scrolltotop:hover {
   opacity: 1;
 }
-.ul_other {
+.hide-block {
   display: none;
 }
 .left_sidebar {
   margin: -40px 50px 0 0;
-  width: 250px;
+  width: 200px;
   float: left;
 }
 .other {
+  font-weight: bold;
   padding-left: 25px;
 }
 .other span:before {
@@ -1142,20 +1143,15 @@ main.categories-page {
   margin-top: 50px;
 }
 .content {
-  width: calc(100% - 300px);
+  width: calc(100% - 250px);
   float: right;
 }
 .sub-category {
   margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+}
+.sub-category .item {
+  width: 25%;
+  float: left;
 }
 .sub-category .item:hover .img-box,
 .sub-category .item.active .img-box {
@@ -1171,6 +1167,7 @@ main.categories-page {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  margin: 0 auto;
 }
 .sub-category img {
   position: absolute;
@@ -1213,6 +1210,18 @@ main.categories-page {
   display: inline-block;
   float: right;
   color: #aaaaaa;
+}
+.seo .other {
+  font-weight: 700;
+  padding: 35px 0;
+}
+.seo .other span:before {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  content: "Читать далее";
+}
+.seo .other.open span:before {
+  content: "Скрить";
 }
 @media (max-width: 1620px) {
   .nav_menu ul li {
@@ -1496,6 +1505,13 @@ main.categories-page {
   .firm_job a {
     width: 70px;
   }
+  .sub-category .item {
+    width: 50%;
+    margin: 25px 0;
+  }
+  .products .item {
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
   ._h1,
@@ -1566,6 +1582,30 @@ main.categories-page {
   .our_partners .slick-slider {
     margin-left: 10px;
     width: 92%;
+  }
+  .bread_crumbs {
+    display: none;
+  }
+  main.categories-page {
+    margin: 0;
+  }
+  ._h2.title-page {
+    margin: 10px 0 30px;
+    text-align: left;
+  }
+  .left_sidebar {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  .left_sidebar ul {
+    display: none;
+  }
+  .left_sidebar .other {
+    display: none;
+  }
+  .content {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {

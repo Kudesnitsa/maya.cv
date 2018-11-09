@@ -10,7 +10,7 @@ function adaptImgPartners() {
 jQuery(document).ready(function() {
 
     jQuery('.other').click(function() {
-        jQuery('.hide-block').slideToggle("slow");
+        jQuery(this).parent().find(".hide-block").slideToggle("slow");
         jQuery(this).toggleClass('open')
     })
 
