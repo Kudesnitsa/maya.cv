@@ -11,8 +11,12 @@ jQuery(document).ready(function() {
 
     jQuery('.other').click(function() {
         jQuery(this).parent().find(".hide-block").slideToggle("slow");
-        jQuery(this).toggleClass('open')
-    })
+        jQuery(this).toggleClass('open');
+    });
+    jQuery('.title_list').click(function() {
+        jQuery('.list_manufacturers').slideToggle("slow");
+        jQuery(this).toggleClass('open');
+    });
 
   adaptImgPartners();
   

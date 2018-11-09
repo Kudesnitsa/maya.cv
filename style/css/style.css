@@ -1084,7 +1084,6 @@ p {
   text-transform: uppercase;
 }
 ul .radio {
-  padding: 5px 0;
   display: block;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1103,13 +1102,13 @@ ul .radio input + span {
   font-family: 'Roboto', sans-serif;
   display: inline-block;
   position: relative;
-  padding-left: 25px;
+  padding: 5px 0 5px 25px;
 }
 ul .radio input + span:before {
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   border-radius: 50%;
   margin-right: 5px;
@@ -1126,7 +1125,7 @@ ul .radio input + span:after {
   background: #ed1b2f;
   position: absolute;
   border-radius: 50%;
-  top: 6px;
+  top: 11px;
   left: 6px;
   opacity: 0;
   -webkit-transform: scale(0, 0);
@@ -1222,6 +1221,49 @@ main.categories-page {
 }
 .seo .other.open span:before {
   content: "Скрить";
+}
+.nav_categories {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav_categories a {
+  color: #aaaaaa;
+  font-weight: bold;
+}
+.nav_categories a:hover {
+  color: #505050;
+}
+.nav_categories .prev:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTcgMzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU3IDM2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNEMUFFNkMiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHgxPSIxLjUiIHkxPSIxOCIgeDI9IjU1LjUiIHkyPSIxOCIvPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNEMUFFNkMiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iMzksMS41IDU1LjUsMTggMzksMzQuNSAiLz48L2c+PC9zdmc+) 0 2px no-repeat;
+  background-size: contain;
+}
+.nav_categories .all:before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  margin: 0 5px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDEuMTQzIDM2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MS4xNDMgMzYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiNEMUFFNkMiIGQ9Ik0zOC41NzEsMTUuNDI5SDI1LjcxNGMtMS40MiwwLTIuNTcxLTEuMTUxLTIuNTcxLTIuNTcxVjIuNTcxYzAtMS40MiwxLjE1MS0yLjU3MSwyLjU3MS0yLjU3MWgxMi44NTdjMS40MiwwLDIuNTcxLDEuMTUxLDIuNTcxLDIuNTcxdjEwLjI4NkM0MS4xNDMsMTQuMjc3LDM5Ljk5MiwxNS40MjksMzguNTcxLDE1LjQyOXoiLz48cGF0aCBmaWxsPSIjRDFBRTZDIiBkPSJNMzguNTcxLDM2SDI1LjcxNGMtMS40MiwwLTIuNTcxLTEuMTUxLTIuNTcxLTIuNTcxVjIzLjE0M2MwLTEuNDIsMS4xNTEtMi41NzEsMi41NzEtMi41NzFoMTIuODU3YzEuNDIsMCwyLjU3MSwxLjE1MSwyLjU3MSwyLjU3MXYxMC4yODZDNDEuMTQzLDM0Ljg0OSwzOS45OTIsMzYsMzguNTcxLDM2eiIvPjxwYXRoIGZpbGw9IiNEMUFFNkMiIGQ9Ik0xNS40MjksMTUuNDI5SDIuNTcxQzEuMTUxLDE1LjQyOSwwLDE0LjI3NywwLDEyLjg1N1YyLjU3MUMwLDEuMTUxLDEuMTUxLDAsMi41NzEsMGgxMi44NTdDMTYuODQ5LDAsMTgsMS4xNTEsMTgsMi41NzF2MTAuMjg2QzE4LDE0LjI3NywxNi44NDksMTUuNDI5LDE1LjQyOSwxNS40Mjl6Ii8+PHBhdGggZmlsbD0iI0QxQUU2QyIgZD0iTTE1LjQyOSwzNkgyLjU3MUMxLjE1MSwzNiwwLDM0Ljg0OSwwLDMzLjQyOVYyMy4xNDNjMC0xLjQyLDEuMTUxLTIuNTcxLDIuNTcxLTIuNTcxaDEyLjg1N2MxLjQyLDAsMi41NzEsMS4xNTEsMi41NzEsMi41NzF2MTAuMjg2QzE4LDM0Ljg0OSwxNi44NDksMzYsMTUuNDI5LDM2eiIvPjwvZz48L3N2Zz4=) no-repeat;
+  background-size: contain;
+}
+.nav_categories .next:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTcgMzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDU3IDM2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNEMUFFNkMiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHgxPSIxLjUiIHkxPSIxOCIgeDI9IjU1LjUiIHkyPSIxOCIvPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNEMUFFNkMiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iMzksMS41IDU1LjUsMTggMzksMzQuNSAiLz48L2c+PC9zdmc+) 0 4px no-repeat;
+  background-size: contain;
 }
 @media (max-width: 1620px) {
   .nav_menu ul li {
@@ -1597,15 +1639,40 @@ main.categories-page {
     width: 100%;
     float: none;
     margin: 0;
+    position: relative;
   }
-  .left_sidebar ul {
-    display: none;
+  .left_sidebar .title_list:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 50px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjIgNjIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIyIDYyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjQUFBQUFBIiBwb2ludHM9IjMsNjIgMCw2MiAxOSwzMSAwLDAgMywwIDIyLDMxICIvPjwvc3ZnPg==) no-repeat;
+    background-size: contain;
+    z-index: 4;
+  }
+  .left_sidebar .title_list.open:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   .left_sidebar .other {
     display: none;
   }
+  .left_sidebar .hide-block {
+    display: block;
+  }
   .content {
     width: 100%;
+  }
+  .list_manufacturers {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    z-index: 3;
+    padding-bottom: 40px;
   }
 }
 @media (max-width: 500px) {
@@ -1659,6 +1726,10 @@ main.categories-page {
   .soc_ico_ok:before {
     width: 30px;
     margin-left: 10px;
+  }
+  .sub-category .item,
+  .products .item {
+    width: 100%;
   }
 }
 @media (max-width: 375px) {
