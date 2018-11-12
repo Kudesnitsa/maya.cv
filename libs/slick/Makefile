@@ -1,8 +1,8 @@
 
 build: components slick.js slick.css
-  @component build --dev
+  @component build __dev
 
 components: component.json
-  @component install --dev
+  @component install __dev
 
 .PHONY: clean
