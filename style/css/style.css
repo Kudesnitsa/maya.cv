@@ -225,6 +225,62 @@ p {
   color: #505050;
   background-color: transparent;
 }
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  border: 0;
+  border-bottom: 2px solid #cecece;
+  padding: 0 0 12px;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #505050;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+input:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}
+input:focus::-ms-input-placeholder {
+  opacity: 0.5;
+}
+input:focus::placeholder {
+  opacity: 0.5;
+}
+input::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+input:focus {
+  border-color: #d1ae6c;
+  /*  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center; // Ensure scaling is done from the center (expands outwards)
+  }*/
+  /*  &::before {
+    border-top: 2px solid @sub-color;
+    border-bottom: 2px solid @sub-color;
+    transform: scale3d(0,1,1); // Shrink only width
+  }*/
+  /*  &::after {
+    border-left: 2px solid @sub-color;
+    border-right: 2px solid @sub-color;
+    transform: scale3d(1,0,1); // Shrink only height
+  }*/
+  /*&:hover::before,
+  &:hover::after {
+    transform: scale3d(1,1,1); // Show full-size
+    transition: transform 0.5s;
+  }*/
+}
 @-webkit-keyframes circle {
   from {
     width: 10px;
@@ -244,6 +300,9 @@ p {
     width: 150px;
     height: 150px;
   }
+}
+.nav {
+  position: relative;
 }
 .nav_top {
   position: relative;
@@ -409,13 +468,15 @@ p {
   padding-left: 15px;
   -webkit-transition: .3s;
   transition: .3s;
+  background: white;
+  z-index: 10;
 }
 .lang_list ul {
   display: inline-block;
   text-align: left;
 }
 .lang_list ul li {
-  padding-bottom: 1px;
+  padding-bottom: 5px;
 }
 .lang_list ul li a {
   color: #3c3c3c;
@@ -802,15 +863,6 @@ p {
 .coop_form {
   max-width: 650px;
 }
-.coop_form input {
-  border: 0;
-  border-bottom: 2px solid #cecece;
-  padding: 0 0 12px;
-  width: 100%;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-  color: #505050;
-}
 .coop_form button {
   color: #ffffff;
   font-size: 21px;
@@ -820,6 +872,9 @@ p {
 .coop_form input[value] {
   font-size: 16px;
   text-transform: uppercase;
+}
+.slider-box {
+  position: relative;
 }
 .our_partners .slick-slider {
   display: inline-block !important;
@@ -838,15 +893,23 @@ p {
 .partner_arrow_prev:before,
 .partner_arrow_next:before {
   content: '';
+  position: absolute;
   display: inline-block;
   width: 15px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   height: 30px;
   background: url(../../img/main_icons_svg/icons_main_strelka_vlevo_partneri.svg) no-repeat;
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
 }
+.partner_arrow_prev:before {
+  left: 15px;
+}
 .partner_arrow_next:before {
+  right: 5px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -883,6 +946,7 @@ p {
 .payment-installments .background {
   position: absolute;
   width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   z-index: -1;
@@ -900,6 +964,7 @@ p {
   float: right;
 }
 .payment-installments .info .text {
+  display: block;
   font-size: 1.4em;
   padding-bottom: 40px;
 }
@@ -1463,7 +1528,7 @@ main.categories-page {
   }
   .nav_menu {
     width: calc(100% - 250px);
-    top: -12px;
+    /*top: -12px;*/
   }
   .nav_top {
     position: static;
@@ -1487,7 +1552,9 @@ main.categories-page {
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 25px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
     right: 25px;
     cursor: pointer;
   }
@@ -1739,6 +1806,13 @@ main.categories-page {
     z-index: 3;
     padding-bottom: 40px;
   }
+  .slider_catg_img {
+    width: 100%;
+  }
+  .payment-installments .info,
+  .box-img {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   ._h1,
@@ -1760,9 +1834,6 @@ main.categories-page {
   }
   .menu_mob_wrap {
     top: 75px;
-  }
-  .btn_mob_menu {
-    top: 20px;
   }
   .about_us p {
     font-size: 14px;
