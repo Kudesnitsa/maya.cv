@@ -1697,6 +1697,8 @@ button.slick-prev.slick-arrow:before {
   width: 20px;
   height: 35px;
   display: inline-block;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   background: rgba(255, 255, 255, 0.8) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA1MDUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjEsMSAxMywxMyAxLDI1ICIvPjwvZz48L3N2Zz4=) no-repeat;
 }
 button.slick-next.slick-arrow {
@@ -1715,8 +1717,6 @@ button.slick-next.slick-arrow:after {
   content: "";
   width: 20px;
   height: 35px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
   display: inline-block;
   background: rgba(255, 255, 255, 0.8) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA1MDUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjEsMSAxMywxMyAxLDI1ICIvPjwvZz48L3N2Zz4=) no-repeat;
 }
