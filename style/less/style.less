@@ -1205,6 +1205,9 @@ main.categories-page {
 }
 
 //end categories | products
+.product-page{
+  margin-top: 40px;
+}
 .nav_categories {
   margin: 25px 0 50px;
   display: flex;
@@ -1254,7 +1257,7 @@ main.categories-page {
   }
   &:hover img {
     transform: scale(1.05);
-    transition: transform 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) out;
+    transition: transform 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .img-box {
@@ -1430,6 +1433,153 @@ main.categories-page {
   }
 }
 
+.wrap_btn {
+  display: table;
+  margin: auto;
+}
+
+.open_modal .modal {
+  visibility: visible;
+  z-index: 10;
+}
+
+.open_modal .overflow {
+  width: 100%;
+  height: 100%;
+  background: rgba(125, 125, 125, 0.5);
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  position: fixed;
+  visibility: hidden;
+  z-index: -2000;
+  box-sizing: border-box;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 50%;
+  width: 90%;
+  padding: 25px;
+  max-width: 600px;
+  background: white;
+  box-shadow: 0 0 15px #afafaf;
+}
+
+.icon.close_modal {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTIgNTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUyIDUyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48Y2lyY2xlIGZpbGw9IiNGRkZGRkYiIGN4PSIyNiIgY3k9IjI2IiByPSIyNiIvPjxnPjxsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzk2OTY5NiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiB4MT0iMzQuNjY3IiB5MT0iMTcuMzMzIiB4Mj0iMTcuMzMzIiB5Mj0iMzQuNjY3Ii8+PGxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOTY5Njk2IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHgxPSIzNC42NjciIHkxPSIzNC42NjciIHgyPSIxNy4zMzMiIHkyPSIxNy4zMzMiLz48L2c+PC9nPjwvc3ZnPg==) no-repeat;
+    background-size: contain;
+
+  }
+}
+
+.confirmation .box-confirmation {
+  visibility: visible;
+  z-index: 11;
+}
+
+.box-confirmation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: -120;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  background: @sub-color;
+  color: white;
+  .text-box {
+    display: table;
+    margin: 0 auto;
+    padding-left: 50px;
+    &:before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+      float: left;
+      display: inline-block;
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNzYgNzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDc2IDc2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMzgsMWMyMC40MzUsMCwzNywxNi41NjUsMzcsMzdTNTguNDM1LDc1LDM4LDc1UzEsNTguNDM1LDEsMzgiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IjQsNiIgZD0iTTEsMzhDMSwxNy41NjUsMTcuNTY1LDEsMzgsMSIvPjxwb2x5bGluZSBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iMTkuMTM1LDM2LjY5MyAzMi41ODMsNTAuMTQxIDU2Ljg2NSwyNS44NTkgIi8+PC9nPjwvc3ZnPg==) no-repeat;
+      background-size: contain;
+
+    }
+  }
+  .title {
+    float: left;
+    font-weight: bold;
+  }
+  .text {
+    float: left;
+  }
+
+}
+
+.slider-nav .item {
+  &.slick-active {
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.38);
+  }
+  margin: 0 5px;
+  img {
+    width: 100%;
+  }
+}
+
+button.slick-prev.slick-arrow {
+  border: none;
+  background: transparent;
+  color: transparent;
+}
+
+button.slick-prev.slick-arrow {
+  position: absolute;
+  z-index: 8;
+  padding: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: none;
+  background: transparent;
+  color: transparent;
+  &:before{
+    content: "";
+    width: 20px;
+    height: 35px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.8) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA1MDUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjEsMSAxMywxMyAxLDI1ICIvPjwvZz48L3N2Zz4=) no-repeat;
+  }
+}
+button.slick-next.slick-arrow{
+  position: absolute;
+  z-index: 8;
+  padding: 0;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  border: none;
+  background: transparent;
+  color: transparent;
+  &:after{
+    content: "";
+    width: 20px;
+    height: 35px;
+    transform: rotate(180deg);
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.8) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA1MDUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjEsMSAxMywxMyAxLDI1ICIvPjwvZz48L3N2Zz4=) no-repeat;
+  }
+}
 @media (max-width: 1620px) {
 
   .nav_menu ul li {
@@ -1798,6 +1948,18 @@ main.categories-page {
   .products .item {
     width: 50%;
   }
+  .slider_prod{
+    display: none;
+
+  }
+  .product-page .content{
+    width: 100%;
+    padding: 0;
+  }
+  .modal{
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 }
 
@@ -1958,6 +2120,9 @@ main.categories-page {
 
   .payment-installments .info, .box-img {
     width: 100%;
+  }
+  .nav_categories span{
+    display: none;
   }
 }
 
