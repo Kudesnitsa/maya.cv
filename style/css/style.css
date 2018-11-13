@@ -126,6 +126,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
   min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1720,6 +1721,69 @@ button.slick-next.slick-arrow:after {
   display: inline-block;
   background: rgba(255, 255, 255, 0.8) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA1MDUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjEsMSAxMywxMyAxLDI1ICIvPjwvZz48L3N2Zz4=) no-repeat;
 }
+.products-categ-page {
+  margin-top: 40px;
+}
+.content-box .item:hover img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 10px solid #FFF;
+  -webkit-box-shadow: 0 0 15px rgba(125, 125, 125, 0.42);
+          box-shadow: 0 0 15px rgba(125, 125, 125, 0.42);
+}
+.content-box .item:hover .label {
+  background: #d1ae6c;
+  color: white;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.content-box img {
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  width: 100%;
+  height: 100%;
+  background: #aaaaaa;
+}
+.content-box .row {
+  margin: 0 -20px;
+}
+.content-box .row div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.content-box .label {
+  position: absolute;
+  padding: 10px;
+  bottom: 19px;
+  left: 19px;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+.content-box .box-50 {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+.content-box .box-25 {
+  width: 25%;
+  float: left;
+  padding: 20px;
+}
+.content-box .box-33 {
+  width: 33.33333%;
+  float: left;
+  padding: 20px;
+}
+@media (min-width: 1024px) {
+  .content-box .row div {
+    height: 440px;
+  }
+}
 @media (max-width: 1620px) {
   .nav_menu ul li {
     padding: 0 16px;
@@ -1795,6 +1859,12 @@ button.slick-next.slick-arrow:after {
   }
 }
 @media (max-width: 1024px) {
+  .content-box .row .div {
+    height: auto;
+  }
+  .content-box .item {
+    width: 100%;
+  }
   ._h1,
   ._h2 {
     font-size: 22px;
