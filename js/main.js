@@ -11,7 +11,7 @@ function adaptImgPartners() {
 jQuery(document).ready(function () {
 
     jQuery('.other').click(function () {
-        jQuery(this).parent().find(".hide-block").slideToggle("slow");
+        jQuery(this).parent().find(".hide_block").slideToggle("slow");
         jQuery(this).toggleClass('open');
     });
 
@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
         jQuery(this).toggleClass('open');
     });
 
-    jQuery('.product-page .btn_goold').click(function () {
+    jQuery('.product_page .btn_goold').click(function () {
         jQuery('body').toggleClass('open_modal');
     });
 
@@ -53,17 +53,17 @@ jQuery(document).ready(function () {
         jQuery('.menu_mob_wrap').slideToggle('slow');
     });
 
-    jQuery('.slider-for').slick({
+    jQuery('.slider_for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider_nav'
     });
-    jQuery('.slider-nav').slick({
+    jQuery('.slider_nav').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
-        asNavFor: '.slider-for',
+        asNavFor: '.slider_for',
         centerMode: true,
         focusOnSelect: true,
         responsive: [
