@@ -148,6 +148,9 @@ nav {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
+b {
+  font-weight: 700;
+}
 .clear_fix:after {
   content: "";
   display: table;
@@ -728,6 +731,7 @@ div.pagination .item.active {
 ._h2.title_page {
   display: block;
   text-align: center;
+  margin: 50px 0;
 }
 .slider_text_content {
   width: 350px;
@@ -1213,6 +1217,7 @@ div.pagination .item.active {
 }
 .close.target {
   position: relative;
+  display: none;
   font-weight: bold;
 }
 .close.target:after {
@@ -1463,7 +1468,7 @@ main.categories_page {
   overflow: hidden;
 }
 .slider_prod {
-  width: 50%;
+  width: 60%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-right: 25px;
@@ -1486,7 +1491,7 @@ main.categories_page {
   cursor: url(../../img/zoom_icon.png), zoom-in;
 }
 .product_page .content {
-  width: 50%;
+  width: 40%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 25px;
@@ -1715,12 +1720,12 @@ main.categories_page {
 .slider_nav .item img {
   width: 100%;
 }
-button.slick_prev.slick_arrow {
+button.slick-prev.slick-arrow {
   border: none;
   background: transparent;
   color: transparent;
 }
-button.slick_prev.slick_arrow {
+button.slick-prev.slick-arrow {
   position: absolute;
   z-index: 8;
   padding: 0;
@@ -1731,7 +1736,7 @@ button.slick_prev.slick_arrow {
   background: transparent;
   color: transparent;
 }
-button.slick_prev.slick_arrow:before {
+button.slick-prev.slick-arrow:before {
   content: "";
   width: 20px;
   height: 35px;
@@ -1740,7 +1745,7 @@ button.slick_prev.slick_arrow:before {
           transform: rotate(180deg);
   background: rgba(255, 255, 255, 0.8) url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE0IDI2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cG9seWxpbmUgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNTA1MDUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludHM9IjEsMSAxMywxMyAxLDI1ICIvPjwvZz48L3N2Zz4=) no-repeat;
 }
-button.slick_next.slick_arrow {
+button.slick-next.slick-arrow {
   position: absolute;
   z-index: 8;
   padding: 0;
@@ -1752,7 +1757,7 @@ button.slick_next.slick_arrow {
   background: transparent;
   color: transparent;
 }
-button.slick_next.slick_arrow:after {
+button.slick-next.slick-arrow:after {
   content: "";
   width: 20px;
   height: 35px;
@@ -1818,9 +1823,6 @@ button.slick_next.slick_arrow:after {
   float: left;
   padding: 20px;
 }
-.articles_page {
-  margin: 50px  0 0 ;
-}
 .articles_page .content_box {
   margin: 50px -15px 0;
 }
@@ -1858,10 +1860,10 @@ button.slick_next.slick_arrow:after {
   border-top: 0;
 }
 .articles_page .item article:hover {
-  background-color: #f4f6fa;
+  background-color: #f5f7fc;
 }
 .articles_page .item article:hover:before {
-  border-bottom-color: #f4f6fa;
+  border-bottom-color: #f5f7fc;
 }
 .articles_page .item .title {
   display: block;
@@ -1910,6 +1912,62 @@ button.slick_next.slick_arrow:after {
 }
 .articles_page .item .read_more:hover span {
   text-decoration: underline;
+}
+.thesis {
+  padding: 50px;
+  background: #f5f7fc;
+  margin-bottom: 50px;
+}
+.thesis .logo {
+  display: table;
+  float: left;
+  margin-right: 70px;
+}
+.thesis .text {
+  color: #505050;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.text-box .photo {
+  width: 50%;
+  float: left;
+  padding-right: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.text-box .photo.right {
+  float: right;
+  padding-left: 40px;
+}
+.text-box .photo img {
+  width: 100%;
+}
+.text-box p {
+  display: inline-block;
+  padding: 20px 0;
+}
+.text-box .text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding-left: 40px;
+}
+.text-box .text .left {
+  float: left;
+  padding-right: 40px;
+}
+.sub_text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0;
+}
+.see_product .btn_red {
+  display: table;
+  margin: 0 auto;
 }
 @media (min-width: 1024px) {
   .content_box .row div {
@@ -2248,6 +2306,9 @@ button.slick_next.slick_arrow:after {
   .about_us,
   .cooperation {
     margin-bottom: 40px;
+  }
+  .close.target {
+    display: block;
   }
   .catg_furnit_cont.wrapper,
   .advantages_cont.wrapper {

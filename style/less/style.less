@@ -419,6 +419,7 @@
 ._h2.title_page {
   display: block;
   text-align: center;
+  margin: 50px 0;
 }
 
 .slider_text_content {
@@ -1016,6 +1017,7 @@
 
 .close.target {
   position: relative;
+  display: none;
   font-weight: bold;
   &:after {
     content: "";
@@ -1270,7 +1272,7 @@ main.categories_page {
 }
 
 .slider_prod {
-  width: 50%;
+  width: 60%;
   box-sizing: border-box;
   padding-right: 25px;
   float: left;
@@ -1293,7 +1295,7 @@ main.categories_page {
 }
 
 .product_page .content {
-  width: 50%;
+  width: 40%;
   box-sizing: border-box;
   padding-left: 25px;
   float: right;
@@ -1539,13 +1541,13 @@ main.categories_page {
   }
 }
 
-button.slick_prev.slick_arrow {
+button.slick-prev.slick-arrow {
   border: none;
   background: transparent;
   color: transparent;
 }
 
-button.slick_prev.slick_arrow {
+button.slick-prev.slick-arrow {
   position: absolute;
   z-index: 8;
   padding: 0;
@@ -1564,7 +1566,7 @@ button.slick_prev.slick_arrow {
   }
 }
 
-button.slick_next.slick_arrow {
+button.slick-next.slick-arrow {
   position: absolute;
   z-index: 8;
   padding: 0;
@@ -1641,7 +1643,6 @@ button.slick_next.slick_arrow {
 
 // end  products-categ | articles
 .articles_page {
-  margin: 50px  0 0 ;
   .content_box {
     margin: 50px -15px 0;
   }
@@ -1673,10 +1674,10 @@ button.slick_next.slick_arrow {
         border-bottom-color: white;
         border-top: 0;
       }
-      &:hover{
-        background-color: #f4f6fa;
+      &:hover {
+        background-color: @background-box;
         &:before {
-          border-bottom-color: #f4f6fa;
+          border-bottom-color: @background-box;
         }
       }
     }
@@ -1690,7 +1691,7 @@ button.slick_next.slick_arrow {
       text-decoration: underline;
       text-transform: uppercase;
       transition: .2s ease-in-out;
-      &:hover{
+      &:hover {
         text-decoration: none;
       }
     }
@@ -1706,7 +1707,7 @@ button.slick_next.slick_arrow {
       font-family: "Open Sans", sans-serif;
       font-style: italic;
       line-height: 1.8em;
-      margin-bottom:40px;
+      margin-bottom: 40px;
       max-height: 110px;
       overflow: hidden;
     }
@@ -1716,7 +1717,7 @@ button.slick_next.slick_arrow {
         font-weight: 700;
         transition: .3s ease-in-out;
       }
-      &:after{
+      &:after {
         content: "";
         width: 6px;
         height: 10px;
@@ -1725,12 +1726,73 @@ button.slick_next.slick_arrow {
         background-size: contain;
 
       }
-      &:hover{
-        span{
+      &:hover {
+        span {
           text-decoration: underline;
         }
       }
     }
+  }
+}
+
+.thesis {
+  padding: 50px;
+  background: @background-box;
+  margin-bottom: 50px;
+  .logo {
+    display: table;
+    float: left;
+    margin-right: 70px;
+  }
+  .text {
+    color: @color-text;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+}
+
+.text-box {
+  .photo {
+    width: 50%;
+    float: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+    &.right {
+      float: right;
+      padding-left: 40px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    display: inline-block;
+    padding: 20px 0;
+  }
+  .text {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    padding-left: 40px;
+    .left{
+      float: left;
+      padding-right: 40px;
+    }
+  }
+}
+.sub_text{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 50px 0;
+}
+.see_product{
+  .btn_red{
+    display: table;
+    margin: 0 auto;
   }
 }
 
@@ -2132,6 +2194,7 @@ button.slick_next.slick_arrow {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   .articles_page {
     .item {
       width: 33.33%;
@@ -2164,7 +2227,9 @@ button.slick_next.slick_arrow {
   .cooperation {
     margin-bottom: 40px;
   }
-
+  .close.target {
+    display: block;
+  }
   .catg_furnit_cont.wrapper,
   .advantages_cont.wrapper {
     margin-bottom: 10px;
@@ -2304,6 +2369,7 @@ button.slick_next.slick_arrow {
   .nav_categories span {
     display: none;
   }
+
   .articles_page {
     .item {
       width: 50%;
@@ -2384,6 +2450,7 @@ button.slick_next.slick_arrow {
   .sub_category .item, .products .item {
     width: 100%;
   }
+
   .articles_page {
     .item {
       width: 100%;

@@ -17,6 +17,9 @@ nav {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
+b {
+  font-weight: 700;
+}
 .clear_fix:after {
   content: "";
   display: table;
