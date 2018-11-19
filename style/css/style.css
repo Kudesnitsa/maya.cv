@@ -149,7 +149,8 @@ b {
   font-weight: 700;
 }
 .footer {
-  margin-top: 90px;
+  border-top: 1px solid #aaaaaa;
+  padding: 50px 0 30px;
 }
 .clear_fix:after {
   content: "";
@@ -416,7 +417,8 @@ div.pagination .item.active {
   letter-spacing: 1px;
   text-decoration: none;
   color: #3c3c3c;
-  font-size: 1.5em;
+  font-size: 1.05em;
+  font-weight: bold;
   display: inline-block;
 }
 .nav_menu .nav_open_menu:after {
@@ -432,6 +434,10 @@ div.pagination .item.active {
 .nav_menu .nav_open_menu:hover:after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+.nav_menu ul li.nav_open_menu a:after {
+  -webkit-transform: translateY(5px) scale(1);
+          transform: translateY(5px) scale(1);
 }
 .nav_menu ul li a:after,
 .foot_top_menu ul li a:after {
@@ -717,6 +723,7 @@ div.pagination .item.active {
 }
 .slider_catg {
   padding: 50px 0;
+  position: relative;
 }
 .slider_catg .nav {
   position: absolute;
@@ -770,8 +777,13 @@ div.pagination .item.active {
   margin: 50px 0;
 }
 .slider_text_content {
-  width: 350px;
+  margin: 10% 0;
+  width: 40%;
+  min-width: 350px;
   padding: 0 70px;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .slider_text_content p {
   font-size: 18px;
@@ -780,11 +792,13 @@ div.pagination .item.active {
 }
 .slider_catg_img {
   overflow: hidden;
-  width: 55%;
+  width: 60%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: right;
 }
 .slider_catg_img img {
   width: 90%;
-  padding: 30px 0;
 }
 .slider_switch_catg {
   height: 120px;
@@ -991,6 +1005,9 @@ div.pagination .item.active {
 .slider_box {
   position: relative;
 }
+.our_partners {
+  padding: 100px 0;
+}
 .our_partners .slick_slider {
   display: inline-block !important;
 }
@@ -1032,25 +1049,23 @@ div.pagination .item.active {
 .partner_arrow_prev:hover:before {
   background: url(../../img/main_icons_svg/icons_main_strelka_vlevo_partneri_hover.svg) no-repeat;
 }
-.partner {
-  width: calc(20% - 35px);
-  display: inline-block;
-  vertical-align: middle;
+.slick-initialized .slick-slide.partner {
+  margin: 10px;
   -webkit-box-shadow: 0 0 16px rgba(37, 52, 73, 0.18);
           box-shadow: 0 0 16px rgba(37, 52, 73, 0.18);
   background-color: #ffffff;
-  margin: 0 15px;
-  min-height: 220px !important;
-  position: relative;
+  min-height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .partner img {
-  display: block;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   max-width: 180px;
 }
 .payment_installments {
@@ -1085,6 +1100,7 @@ div.pagination .item.active {
 }
 .map iframe {
   width: 100%;
+  display: block;
 }
 .footer.wrapper {
   margin-bottom: 0;
@@ -1114,14 +1130,24 @@ div.pagination .item.active {
   position: relative;
   padding: 40px 0;
 }
+.foot_inform.addresses {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.foot_inform.addresses div {
+  margin: 0;
+}
 .foot_inform ul {
-  color: #504f4f;
-  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
   float: left;
   margin-right: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
 }
 .foot_inform ul li {
-  padding: 3px 0 5px 0;
+  padding: 0 0 10px 0;
 }
 .foot_inform ul li a {
   color: #3c3c3c;
@@ -1193,7 +1219,7 @@ div.pagination .item.active {
   float: right;
 }
 .firm_job a {
-  width: 62px;
+  width: 90px;
   display: inline-block;
 }
 .firm_job a img {
@@ -1202,9 +1228,10 @@ div.pagination .item.active {
 .firm_job p {
   padding: 0 10px 0 0;
   display: inline-block;
-  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
 }
 .foot_copyrigt {
+  font-family: "Open Sans", sans-serif;
   display: inline-block;
 }
 .scrolltotop {
@@ -2194,6 +2221,53 @@ button.slick-next.slick-arrow:after {
 .advantages_cont {
   margin: 30px 0 100px;
 }
+.not_find_page {
+  background: #f5f7fc;
+}
+.not_find_page .info {
+  width: 90%;
+  max-width: 900px;
+  min-height: 400px;
+  margin: 90px auto;
+  background: url("../../img/404_pc.png") center center no-repeat;
+  background-size: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.not_find_page .title {
+  color: #d1ae6c;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.not_find_page .back {
+  background-color: #e2e8f6;
+  padding: 10px 15px;
+  border: none;
+  color: #3c3c3c;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.not_find_page .back:before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAgMTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwIDE2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjM0MzQzNDIiBwb2ludHM9IjEwLDE2IDYsMTYgMCw4IDYsMCAxMCwwIDQsOCAiLz48L3N2Zz4=) no-repeat;
+}
 @media (min-width: 1024px) {
   .content_box .row div {
     height: 440px;
@@ -2219,7 +2293,7 @@ button.slick-next.slick-arrow:after {
     width: 150px;
   }
   .nav_menu ul li a {
-    font-size: 0.95em;
+    font-size: 1.05em;
   }
   .nav_search.nav_active_search_wrap {
     width: calc(100% - 45px);
@@ -2720,6 +2794,12 @@ button.slick-next.slick-arrow:after {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     float: left;
+  }
+  .not_find_page .back {
+    font-size: 15px;
+  }
+  .not_find_page .title {
+    font-size: 21px;
   }
 }
 @media (max-width: 375px) {
